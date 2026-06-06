@@ -1,0 +1,77 @@
+.card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.4rem 1.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  animation: fadeInUp var(--transition-slow) both;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-strong);
+}
+
+.iconWrap {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: white;
+  flex-shrink: 0;
+  background: var(--gradient-accent);
+  box-shadow: var(--shadow-accent);
+}
+
+.primary  .iconWrap { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
+.success  .iconWrap { background: linear-gradient(135deg, #10b981, #059669); box-shadow: 0 10px 24px rgba(16, 185, 129, 0.30); }
+.warning  .iconWrap { background: linear-gradient(135deg, #f59e0b, #f97316); box-shadow: 0 10px 24px rgba(245, 158, 11, 0.30); }
+.danger   .iconWrap { background: linear-gradient(135deg, #ef4444, #ec4899); box-shadow: 0 10px 24px rgba(239, 68, 68, 0.30); }
+
+.body { display: flex; flex-direction: column; gap: 0.2rem; min-width: 0; }
+
+.label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+.value {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.caption {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* Soft radial glow behind card */
+.glow {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  right: -80px;
+  top: -80px;
+  border-radius: 50%;
+  filter: blur(50px);
+  opacity: 0.20;
+  background: var(--accent);
+  pointer-events: none;
+}
+.success .glow { background: #10b981; }
+.warning .glow { background: #f59e0b; }
+.danger  .glow { background: #ef4444; }

@@ -1,0 +1,26 @@
+.error {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  background: rgba(239, 68, 68, 0.10);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  color: var(--danger);
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  animation: fadeInUp var(--transition) ease;
+}
+
+.error svg { flex-shrink: 0; }
+
+.close {
+  margin-left: auto;
+  font-size: 1.3rem;
+  line-height: 1;
+  color: var(--danger);
+  cursor: pointer;
+  padding: 0 0.35rem;
+  border-radius: 6px;
+  transition: background var(--transition-fast);
+}
+.close:hover { background: rgba(239, 68, 68, 0.15); }
