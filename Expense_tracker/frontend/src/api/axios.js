@@ -5,7 +5,7 @@ import axios from 'axios';
  * /api to the backend (see vite.config.js).
  */
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://fs-expense-tracker.onrender.com/api',
   headers: { 'Content-Type': 'application/json' },
 });
 
